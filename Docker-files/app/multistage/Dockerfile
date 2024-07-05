@@ -1,7 +1,7 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/mohamednasser018/vprofile-project-cicd.git
-RUN cd vprofile-project-cicd && mvn install
+RUN cd vprofile-project-cicd && mvn clean install
 
 FROM tomcat:9-jre11
 
